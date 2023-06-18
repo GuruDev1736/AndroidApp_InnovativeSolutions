@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:overScrollMode="never"
+    android:background="@color/white"
     android:scrollbars="none"
     tools:context=".Activities.Authentication.VerifyOTPActivity">
 
@@ -44,7 +45,7 @@
             android:textColor="@color/gray"/>
 
         <TextView
-            android:id="@+id/textMobile"
+            android:id="@+id/tv_MobileNo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
@@ -93,13 +94,15 @@
                 android:textSize="14sp"/>
 
             <TextView
-                android:id="@+id/textResendOTP"
+                android:id="@+id/tv_ResendOTP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="@string/resend_otp"
                 android:textColor="@color/accent"
                 android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
                 android:fontFamily="@font/nunito"
                 android:textSize="15sp"/>
         </LinearLayout>
@@ -109,7 +112,7 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/buttonVerify"
+                android:id="@+id/btn_Verify"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="30dp"

@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:overScrollMode="never"
+    android:background="@color/white"
     android:scrollbars="none"
     tools:context=".Activities.Authentication.SendOtpActivity">
 
@@ -73,14 +74,12 @@
                 android:textStyle="bold"/>
 
             <EditText
-                android:id="@+id/inputMobile"
+                android:id="@+id/et_MobileNo"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:background="@null"
                 android:hint="@string/_123456789"
-                android:imeOptions="actionDone"
-                android:importantForAutofill="no"
-                android:inputType="number"
+                android:inputType="phone"
                 android:textColorHighlight="@color/primary"
                 android:fontFamily="@font/nunito"
                 android:maxLength="10"
@@ -103,7 +102,7 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/buttonGetOTP"
+                android:id="@+id/btn_GetOTP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="30dp"

@@ -10,4 +10,8 @@
     <string name="didn_t_receive_the_otp">Didn\'t receive the OTP?</string>
     <string name="verify">Verify</string>
     <string name="resend_otp">RESEND OTP</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

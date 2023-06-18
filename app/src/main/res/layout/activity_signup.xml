@@ -28,7 +28,7 @@
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/animationView"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="200dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
@@ -62,6 +62,7 @@
                 android:layout_marginEnd="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_fullname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
@@ -97,6 +98,7 @@
                 android:layout_marginEnd="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_phoneno"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
@@ -137,6 +139,7 @@
                 android:layout_marginEnd="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
@@ -174,6 +177,7 @@
                 android:layout_marginEnd="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
@@ -211,6 +215,7 @@
                 android:layout_marginEnd="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_confirm_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
@@ -248,6 +253,7 @@
                 android:layout_marginEnd="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"

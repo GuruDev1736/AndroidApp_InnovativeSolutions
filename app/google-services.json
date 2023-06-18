@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "139850754276",
+    "project_id": "innovative-solutions-23690",
+    "storage_bucket": "innovative-solutions-23690.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139850754276:android:5fc4e774593692b01f64f1",
+        "android_client_info": {
+          "package_name": "com.Guruprasad.innovativesolutions"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139850754276-jo9ibaus2jiq5g503a2h6fqh9irv8dnc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLCF357jrIbFPLsuP6hfwXsNJcDjQH9Yg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139850754276-jo9ibaus2jiq5g503a2h6fqh9irv8dnc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
