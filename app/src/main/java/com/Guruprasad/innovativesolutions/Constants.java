@@ -4,10 +4,13 @@ package com.Guruprasad.innovativesolutions;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import es.dmoral.toasty.Toasty;
 
@@ -49,6 +52,16 @@ public class Constants {
     public static Toasty normal(Context context , String message , Drawable icon)
     {
         Toasty.normal(context, message, Toast.LENGTH_LONG , icon).show();
+        return null;
+    }
+
+    public static MaterialAlertDialogBuilder dialog(Context context ,String title , String message)
+    {
+        new MaterialAlertDialogBuilder(context,R.style.RoundShapeTheme)
+                .setTitle(title)
+                .setIcon(R.drawable.logo_1)
+                .setMessage(message)
+                .setCancelable(false);
         return null;
     }
 

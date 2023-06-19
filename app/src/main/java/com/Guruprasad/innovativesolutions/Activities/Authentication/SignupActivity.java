@@ -1,15 +1,23 @@
 package com.Guruprasad.innovativesolutions.Activities.Authentication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
 import com.Guruprasad.innovativesolutions.Constants;
+import com.Guruprasad.innovativesolutions.Model.RegisterModel;
 import com.Guruprasad.innovativesolutions.R;
 import com.Guruprasad.innovativesolutions.databinding.ActivitySignupBinding;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -34,7 +42,7 @@ public class SignupActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String mobile = intent.getStringExtra("phoneno");
-        binding.etPhoneno.setText("9697981736");
+        binding.etPhoneno.setText(mobile);
 
         binding.btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,7 +101,7 @@ public class SignupActivity extends AppCompatActivity {
                 }
 
 
-
+                create_account(fullname,phoneno,address,email,password);
 
             }
         });
@@ -101,13 +109,68 @@ public class SignupActivity extends AppCompatActivity {
 
     }
 
-    public void create_account()
+    private void create_account(String fullname , String phoneno , String address ,String email , String password)
     {
-
+        ProgressDialog pd = Constants.progress_dialog(SignupActivity.this,"Please Wait","Creating New User Account...");
+        pd.show();
+            auth.createUserWithEmailAndPassword(email,password)
+                    .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                        @Override
+                        public void onSuccess(AuthResult authResult) {
+                            RegisterModel model = new RegisterModel(auth.getCurrentUser().getUid(),
+                                    fullname,phoneno,email,password,address);
+                            reference.child(auth.getCurrentUser().getUid()).setValue(model)
+                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void unused) {
+                                            pd.dismiss();
+                                            new MaterialAlertDialogBuilder(SignupActivity.this,R.style.RoundShapeTheme)
+                                                    .setTitle("Note")
+                                                    .setMessage("User account has registered successfully , We will send  Email verification link on your registered email address " +
+                                                            "please verify your email and login again")
+                                                    .setIcon(R.drawable.logo_1)
+                                                    .setCancelable(false)
+                                            .setPositiveButton("SEND", new DialogInterface.OnClickListener() {
+                                                       @Override
+                                                       public void onClick(DialogInterface dialogInterface, int i) {
+                                                           auth.getCurrentUser().sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                               @Override
+                                                               public void onSuccess(Void unused) {
+                                                                   Constants.success(SignupActivity.this,"Email verification link sent successfully");
+                                                                   startActivity(new Intent(SignupActivity.this,LoginActivity.class));
+                                                                   finish();
+                                                               }
+                                                           }).addOnFailureListener(new OnFailureListener() {
+                                                               @Override
+                                                               public void onFailure(@NonNull Exception e) {
+                                                                   Constants.error(SignupActivity.this,"Failed to send email verification link : "+e.getMessage());
+                                                               }
+                                                           });
+                                                       }
+                                                   }).setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                                                       @Override
+                                                       public void onClick(DialogInterface dialogInterface, int i) {
+                                                           Constants.error(SignupActivity.this,"Sorry you can't login , Please verify the email first");
+                                                           startActivity(new Intent(SignupActivity.this,LoginActivity.class));
+                                                           finish();
+                                                       }
+                                                   }).show();
+                                        }
+                                    }).addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            pd.dismiss();
+                                            Constants.error(SignupActivity.this,"Failed to register user account : "+e.getMessage());
+                                        }
+                                    });
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            pd.dismiss();
+                            Constants.error(SignupActivity.this,"Failed to register user account : "+e.getMessage());
+                        }
+                    });
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
 }

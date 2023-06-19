@@ -69,13 +69,13 @@ public class VerifyOTPActivity extends AppCompatActivity {
                         .setTitle("Resend OTP")
                         .setMessage("OTP will resend to following phone number "+phone_no+" Please double check the phone number")
                         .setIcon(R.drawable.logo_1)
-                        .setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("SEND", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 resend_code(phone_no);
                             }
                         })
-                        .setNeutralButton("NO", new DialogInterface.OnClickListener() {
+                        .setNeutralButton("CANCEL", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                     dialogInterface.cancel();
@@ -126,7 +126,7 @@ public class VerifyOTPActivity extends AppCompatActivity {
         ProgressDialog pd = Constants.progress_dialog(VerifyOTPActivity.this,"Please Wait","Re-Sending OTP...");
         pd.show();
 
-            PhoneAuthProvider.getInstance().verifyPhoneNumber("+919697981736", 60, TimeUnit.SECONDS, VerifyOTPActivity.this
+            PhoneAuthProvider.getInstance().verifyPhoneNumber(phone_number, 60, TimeUnit.SECONDS, VerifyOTPActivity.this
                     , new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
                         @Override
                         public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
