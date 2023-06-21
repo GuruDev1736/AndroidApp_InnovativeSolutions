@@ -126,7 +126,7 @@ public class VerifyOTPActivity extends AppCompatActivity {
         ProgressDialog pd = Constants.progress_dialog(VerifyOTPActivity.this,"Please Wait","Re-Sending OTP...");
         pd.show();
 
-            PhoneAuthProvider.getInstance().verifyPhoneNumber(phone_number, 60, TimeUnit.SECONDS, VerifyOTPActivity.this
+            PhoneAuthProvider.getInstance().verifyPhoneNumber(phone_number, 30, TimeUnit.SECONDS, VerifyOTPActivity.this
                     , new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
                         @Override
                         public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
@@ -151,12 +151,6 @@ public class VerifyOTPActivity extends AppCompatActivity {
 
     public void resend_verification(String otp , String verification_id ,ProgressDialog pd , String phone_number)
     {
-        if (otp.isEmpty())
-        {
-            Constants.error(VerifyOTPActivity.this,"Please enter the OTP");
-            return;
-        }
-
         if (verification_id!=null)
         {
             pd.show();
@@ -189,6 +183,7 @@ public class VerifyOTPActivity extends AppCompatActivity {
         alertDialog.setMessage("Enter new OTP which has been send now");
         final EditText input = new EditText(VerifyOTPActivity.this);
         alertDialog.setView(input);
+        alertDialog.setCancelable(false);
         alertDialog.setIcon(R.drawable.logo_1);
 
         alertDialog.setPositiveButton("Verify", new DialogInterface.OnClickListener() {
@@ -196,7 +191,16 @@ public class VerifyOTPActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 ProgressDialog progressDialog = Constants.progress_dialog(VerifyOTPActivity.this,"Please Wait","Verifying OTP...");
                 String otp = input.getText().toString();
+                if (otp.isEmpty())
+                {
+                    Constants.error(VerifyOTPActivity.this,"Please enter the OTP");
+                    return;
+                }
+                else
+                {
                 resend_verification(otp,verification_id,progressDialog,phoneno);
+                }
+
 
             }
         });

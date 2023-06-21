@@ -126,6 +126,19 @@
 
         </FrameLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="50dp"
+            android:gravity="center"
+            android:text="Please wait for 30 seconds before resending the OTP"
+            android:textSize="14sp"
+            android:fontFamily="@font/nunito"
+            android:textColor="@color/gray"/>
+
+
 
     </LinearLayout>
 
