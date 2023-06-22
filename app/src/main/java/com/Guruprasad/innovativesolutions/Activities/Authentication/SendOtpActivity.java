@@ -44,6 +44,7 @@ public class SendOtpActivity extends AppCompatActivity {
         binding.btnGetOTP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Constants.info(SendOtpActivity.this,"Please Wait , This can take a moment");
                 ProgressDialog pd = Constants.progress_dialog(SendOtpActivity.this,"Please Wait","Sending OTP...");
                 pd.show();

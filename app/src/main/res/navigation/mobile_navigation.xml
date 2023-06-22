@@ -12,14 +12,20 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.Guruprasad.innovativesolutions.Activities.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:id="@+id/navigation_deals"
+        android:name="com.Guruprasad.innovativesolutions.Activities.ui.deals.DealsFragment"
+        android:label="@string/title_Deals"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.Guruprasad.innovativesolutions.Activities.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
+        android:id="@+id/navigation_order"
+        android:name="com.Guruprasad.innovativesolutions.Activities.ui.Orders.OrdersFragment"
+        android:label="@string/title_order"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.Guruprasad.innovativesolutions.Activities.ui.profile.Profile"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
