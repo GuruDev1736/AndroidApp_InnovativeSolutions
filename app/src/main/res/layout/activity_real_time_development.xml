@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.ui.home.RealTimeDevelopement.RealTimeDevelopment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/topic_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:hint="Topic"
+            app:boxStrokeColor="@color/primary"
+            app:hintTextColor="@color/primary"
+            app:boxStrokeErrorColor="@color/red"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            android:layout_marginTop="20dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/gray"
+            app:boxCornerRadiusTopStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_topic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito"
+                android:textSize="18sp"
+                android:padding="20dp"
+                android:inputType="text"
+                android:textColorHighlight="@color/primary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/requirement_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topic_layout"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:hint="Requirements"
+            app:boxStrokeColor="@color/primary"
+            app:hintTextColor="@color/primary"
+            app:boxStrokeErrorColor="@color/red"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            android:layout_marginTop="20dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/gray"
+            app:boxCornerRadiusTopStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_requirement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito"
+                android:textSize="18sp"
+                android:padding="20dp"
+                android:maxLines="5"
+                android:inputType="textMultiLine"
+                android:textColorHighlight="@color/primary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/requirement_layout"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:hint="Phone No"
+            app:boxStrokeColor="@color/primary"
+            app:hintTextColor="@color/primary"
+            app:boxStrokeErrorColor="@color/red"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            android:layout_marginTop="20dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/gray"
+            app:boxCornerRadiusTopStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_phoneno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito"
+                android:textSize="18sp"
+                android:padding="20dp"
+                android:inputType="phone"
+                android:textColorHighlight="@color/primary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phone_layout"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:hint="Email"
+            app:boxStrokeColor="@color/primary"
+            app:hintTextColor="@color/primary"
+            app:boxStrokeErrorColor="@color/red"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            android:layout_marginTop="20dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/gray"
+            app:boxCornerRadiusTopStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito"
+                android:textSize="18sp"
+                android:padding="20dp"
+                android:inputType="textEmailAddress"
+                android:textColorHighlight="@color/primary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/whatsapp_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email_layout"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:hint="Whatsapp No"
+            app:boxStrokeColor="@color/primary"
+            app:hintTextColor="@color/primary"
+            app:boxStrokeErrorColor="@color/red"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            android:layout_marginTop="20dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/gray"
+            app:boxCornerRadiusTopStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_whatsapp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito"
+                android:textSize="18sp"
+                android:padding="20dp"
+                android:inputType="phone"
+                android:textColorHighlight="@color/primary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/budget_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/whatsapp_layout"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:hint="Budget Pricing"
+            app:boxStrokeColor="@color/primary"
+            app:hintTextColor="@color/primary"
+            app:boxStrokeErrorColor="@color/red"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            android:layout_marginTop="20dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/gray"
+            app:boxCornerRadiusTopStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_budget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito"
+                android:textSize="18sp"
+                android:padding="20dp"
+                android:inputType="numberDecimal"
+                android:textColorHighlight="@color/primary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:id="@+id/purpose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/budget_layout"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:padding="20dp"
+            android:layout_marginEnd="10dp"
+            android:spinnerMode="dialog"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/purpose"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="9dp"
+            android:fontFamily="@font/nunito"
+            android:text="Submit" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/submit"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/nunito"
+            android:text="Contact Us" />
+    </RelativeLayout>
+</ScrollView>

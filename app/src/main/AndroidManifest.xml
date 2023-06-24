@@ -27,6 +27,12 @@
         android:theme="@style/Theme.InnovativeSolutions"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.ui.home.RealTimeDevelopement.RealTimeDevelopment"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ui.home.Buy.ListProjectsActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.HomeActivity"
             android:exported="false"
             android:label="@string/title_activity_home" />
@@ -41,19 +47,16 @@
         </activity>
         <activity
             android:name=".Activities.Authentication.VerifyOTPActivity"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".Activities.Authentication.SendOtpActivity"
             android:exported="false" />
         <activity
             android:name=".Activities.Authentication.SignupActivity"
-            android:exported="false" >
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".Activities.Authentication.LoginActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>
