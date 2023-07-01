@@ -42,7 +42,6 @@
                 android:textColorHighlight="@color/primary" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/requirement_layout"
             android:layout_width="match_parent"
