@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     tools:context=".Activities.Authentication.LoginActivity">
 
     <ScrollView
@@ -47,7 +46,6 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="10dp"
                 android:hint="Email"
-                android:textColorHint="@color/black"
                 app:boxStrokeColor="@color/primary"
                 app:hintTextColor="@color/primary"
                 app:boxStrokeErrorColor="@color/red"
@@ -64,18 +62,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
-                    android:textColor="@color/black"
                     android:textSize="18sp"
                     android:padding="20dp"
                     android:inputType="textEmailAddress"
                     android:textColorHighlight="@color/primary"
-                    android:drawableStart="@drawable/outline_email_24"
-                    android:drawablePadding="20dp" />
+                  />
             </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/password_layout"
@@ -86,7 +78,6 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="10dp"
                 android:hint="Password"
-                android:textColorHint="@color/black"
                 app:boxStrokeColor="@color/primary"
                 app:hintTextColor="@color/primary"
                 app:boxStrokeErrorColor="@color/red"
@@ -104,18 +95,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
-                    android:textColor="@color/black"
                     android:textSize="18sp"
                     android:inputType="textPassword"
                     android:textColorHighlight="@color/primary"
                     android:padding="20dp"
-                    android:drawableStart="@drawable/outline_password_24"
-                    android:drawablePadding="20dp" />
+             />
             </com.google.android.material.textfield.TextInputLayout>
 
 
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_forgot_password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -125,13 +114,12 @@
                 android:layout_marginEnd="10dp"
                 android:fontFamily="@font/nunito"
                 android:text="Forgot Password ?"
-                android:linksClickable="true"
-                android:textColorLink="@color/primary"
-                android:textColor="@color/black"
+                android:clickable="true"
+                android:focusable="true"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -163,7 +151,7 @@
                 android:background="@color/gray"
                 android:minWidth="2dp" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_signup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

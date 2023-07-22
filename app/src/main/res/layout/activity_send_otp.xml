@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:overScrollMode="never"
-    android:background="@color/white"
     android:scrollbars="none"
     tools:context=".Activities.Authentication.SendOtpActivity">
 
@@ -21,17 +20,16 @@
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_send"/>
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:text="@string/otp_verification"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:fontFamily="@font/nunito"
-            android:textColor="@color/text_primary"/>
+            android:fontFamily="@font/nunito" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
@@ -40,10 +38,9 @@
             android:gravity="center"
             android:text="@string/we_will_send_you_an_one_time_password_on_this_mobile_number"
             android:textSize="14sp"
-            android:fontFamily="@font/nunito"
-            android:textColor="@color/gray"/>
+            android:fontFamily="@font/nunito" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
@@ -52,7 +49,6 @@
             android:gravity="center"
             android:fontFamily="@font/nunito"
             android:text="@string/enter_mobile_number"
-            android:textColor="@color/gray"
             android:textSize="14sp"/>
 
         <LinearLayout
@@ -63,27 +59,24 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:gravity="center"
                 android:text="@string/_84"
                 android:fontFamily="@font/nunito"
-                android:textColor="@color/text_primary"
                 android:textSize="16sp"
                 android:textStyle="bold"/>
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_MobileNo"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:background="@null"
                 android:hint="@string/_123456789"
                 android:inputType="phone"
-                android:textColorHighlight="@color/primary"
                 android:fontFamily="@font/nunito"
                 android:maxLength="10"
-                android:textColor="@color/text_primary"
                 android:textSize="16sp"
                 android:textStyle="bold"/>
 
@@ -114,12 +107,6 @@
                 android:textStyle="bold"
                 android:textSize="18sp" />
 
-            <ProgressBar
-                android:id="@+id/progressBar"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:visibility="gone"/>
         </FrameLayout>
 
     </LinearLayout>

@@ -27,6 +27,9 @@
         android:theme="@style/Theme.InnovativeSolutions"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.ui.home.Contact.ContactActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.ui.home.RealTimeDevelopement.RealTimeDevelopment"
             android:exported="false" />
         <activity

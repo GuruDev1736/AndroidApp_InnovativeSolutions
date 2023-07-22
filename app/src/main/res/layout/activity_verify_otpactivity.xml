@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:overScrollMode="never"
-    android:background="@color/white"
     android:scrollbars="none"
     tools:context=".Activities.Authentication.VerifyOTPActivity">
 
@@ -22,17 +21,16 @@
             android:contentDescription="@string/app_name"
             android:src="@drawable/receive"/>
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:text="@string/otp_verification"
             android:textStyle="bold"
             android:fontFamily="@font/nunito"
-            android:textSize="20sp"
-            android:textColor="@color/text_primary"/>
+            android:textSize="20sp" />
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
@@ -41,8 +39,7 @@
             android:gravity="center"
             android:text="@string/enter_the_otp_sent_to"
             android:textSize="14sp"
-            android:fontFamily="@font/nunito"
-            android:textColor="@color/gray"/>
+            android:fontFamily="@font/nunito" />
 
         <TextView
             android:id="@+id/tv_MobileNo"
@@ -61,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textColor="#000000"
+            android:textColor="@color/gray"
             app:bar_active_color="@color/primary"
             app:bar_enabled="true"
             app:bar_error_color="@color/red"
@@ -85,15 +82,14 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/didn_t_receive_the_otp"
-                android:textColor="@color/gray"
                 android:fontFamily="@font/nunito"
                 android:textSize="14sp"/>
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_ResendOTP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -135,8 +131,7 @@
             android:gravity="center"
             android:text="Please wait for 30 seconds before resending the OTP"
             android:textSize="14sp"
-            android:fontFamily="@font/nunito"
-            android:textColor="@color/gray"/>
+            android:fontFamily="@font/nunito" />
 
 
 

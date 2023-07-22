@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     tools:context=".Activities.Authentication.SignupActivity">
 
     <ScrollView
@@ -49,7 +48,6 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:hint="Full Name"
-                android:textColorHint="@color/black"
                 app:boxStrokeColor="@color/primary"
                 app:hintTextColor="@color/primary"
                 app:boxStrokeErrorColor="@color/red"
@@ -57,7 +55,6 @@
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
                 app:endIconMode="clear_text"
-                app:endIconTint="@color/gray"
                 app:boxCornerRadiusTopStart="10dp"
                 android:layout_marginEnd="10dp">
 
@@ -66,13 +63,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
-                    android:textColor="@color/black"
                     android:textSize="18sp"
                     android:padding="20dp"
-                    android:inputType="textPersonName"
                     android:textColorHighlight="@color/primary"
-                    android:drawableStart="@drawable/baseline_drive_file_rename_outline_24"
-                    android:drawablePadding="20dp" />
+                    android:inputType="textPersonName"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -87,7 +82,6 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:hint="Phone No"
-                android:textColorHint="@color/black"
                 app:boxStrokeColor="@color/primary"
                 app:hintTextColor="@color/primary"
                 app:boxStrokeErrorColor="@color/red"
@@ -102,16 +96,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
-                    android:textColor="@color/black"
                     android:textSize="18sp"
                     android:padding="20dp"
                     android:cursorVisible="false"
                     android:inputType="none"
                     android:editable="false"
                     android:enabled="false"
-                    android:textColorHighlight="@color/primary"
-                    android:drawableStart="@drawable/outline_phone_24"
-                    android:drawablePadding="20dp" />
+                    android:textColorHighlight="@color/primary"/>
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -125,7 +116,6 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="10dp"
                 android:hint="Email"
-                android:textColorHint="@color/black"
                 app:boxStrokeColor="@color/primary"
                 app:hintTextColor="@color/primary"
                 app:boxStrokeErrorColor="@color/red"
@@ -133,7 +123,6 @@
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
                 app:endIconMode="clear_text"
-                app:endIconTint="@color/gray"
                 app:boxCornerRadiusTopStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp">
@@ -143,13 +132,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
-                    android:textColor="@color/black"
                     android:textSize="18sp"
                     android:padding="20dp"
                     android:inputType="textEmailAddress"
-                    android:textColorHighlight="@color/primary"
-                    android:drawableStart="@drawable/outline_email_24"
-                    android:drawablePadding="20dp" />
+                    android:textColorHighlight="@color/primary" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -163,7 +149,6 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="10dp"
                 android:hint="Password"
-                android:textColorHint="@color/black"
                 app:boxStrokeColor="@color/primary"
                 app:hintTextColor="@color/primary"
                 app:boxStrokeErrorColor="@color/red"
@@ -171,7 +156,6 @@
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
                 app:endIconMode="password_toggle"
-                app:endIconTint="@color/gray"
                 app:boxCornerRadiusTopStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp">
@@ -181,13 +165,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
-                    android:textColor="@color/black"
                     android:textSize="18sp"
                     android:padding="20dp"
                     android:inputType="textPassword"
                     android:textColorHighlight="@color/primary"
-                    android:drawableStart="@drawable/outline_password_24"
-                    android:drawablePadding="20dp" />
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -201,7 +183,6 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="10dp"
                 android:hint="Confirm Password"
-                android:textColorHint="@color/black"
                 app:boxStrokeColor="@color/primary"
                 app:hintTextColor="@color/primary"
                 app:boxStrokeErrorColor="@color/red"
@@ -209,7 +190,6 @@
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
                 app:endIconMode="password_toggle"
-                app:endIconTint="@color/gray"
                 app:boxCornerRadiusTopStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp">
@@ -219,13 +199,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
-                    android:textColor="@color/black"
                     android:textSize="18sp"
                     android:padding="20dp"
                     android:inputType="textPassword"
-                    android:textColorHighlight="@color/primary"
-                    android:drawableStart="@drawable/outline_password_24"
-                    android:drawablePadding="20dp" />
+                    android:textColorHighlight="@color/primary" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -239,7 +216,6 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="10dp"
                 android:hint="Address"
-                android:textColorHint="@color/black"
                 app:boxStrokeColor="@color/primary"
                 app:hintTextColor="@color/primary"
                 app:boxStrokeErrorColor="@color/red"
@@ -247,7 +223,6 @@
                 app:boxCornerRadiusBottomEnd="10dp"
                 app:boxCornerRadiusTopEnd="10dp"
                 app:endIconMode="clear_text"
-                app:endIconTint="@color/gray"
                 app:boxCornerRadiusTopStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp">
@@ -257,15 +232,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nunito"
-                    android:textColor="@color/black"
                     android:textSize="18sp"
                     android:padding="20dp"
                     android:maxLength="50"
                     android:maxLines="5"
                     android:inputType="textMultiLine"
-                    android:textColorHighlight="@color/primary"
-                    android:drawableStart="@drawable/outline_home_24"
-                    android:drawablePadding="20dp" />
+                    android:textColorHighlight="@color/primary" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -324,8 +296,5 @@
 
 
         </RelativeLayout>
-
     </ScrollView>
-
-
 </RelativeLayout>
