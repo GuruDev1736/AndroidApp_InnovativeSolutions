@@ -1,7 +1,17 @@
 package com.Guruprasad.innovativesolutions.Model;
 
 public class RegisterModel {
-    private String UserId,FullName , PhoneNo,Email,Password,Address;
+    private String UserId,FullName , PhoneNo,Email,Password,Address , Profile_pic;
+
+    public RegisterModel(String userId, String fullName, String phoneNo, String email, String password, String address, String profile_pic) {
+        UserId = userId;
+        FullName = fullName;
+        PhoneNo = phoneNo;
+        Email = email;
+        Password = password;
+        Address = address;
+        Profile_pic = profile_pic;
+    }
 
     public RegisterModel(String userId, String fullName, String phoneNo, String email, String password, String address) {
         UserId = userId;
@@ -10,6 +20,9 @@ public class RegisterModel {
         Email = email;
         Password = password;
         Address = address;
+    }
+
+    public RegisterModel() {
     }
 
     public String getUserId() {
@@ -58,5 +71,13 @@ public class RegisterModel {
 
     public void setAddress(String address) {
         Address = address;
+    }
+
+    public String getProfile_pic() {
+        return Profile_pic;
+    }
+
+    public void setProfile_pic(String profile_pic) {
+        Profile_pic = profile_pic;
     }
 }

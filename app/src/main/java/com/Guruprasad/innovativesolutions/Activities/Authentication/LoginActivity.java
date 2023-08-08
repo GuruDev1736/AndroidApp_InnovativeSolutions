@@ -32,6 +32,8 @@ public class LoginActivity extends AppCompatActivity {
     public static final String EMAIL = "email";
     public static final String PASSWORD = "password";
     private String mail ;
+
+    private ProgressDialog pd ;
     private String pass ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -153,7 +155,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void email_verfication_login(String email , String password)
     {
-        ProgressDialog pd = Constants.progress_dialog(LoginActivity.this,"Please Wait","Signing user....");
+         pd = Constants.progress_dialog(LoginActivity.this,"Please Wait","Signing user....");
         pd.show();
         auth.signInWithEmailAndPassword(email,password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
@@ -210,5 +212,21 @@ public class LoginActivity extends AppCompatActivity {
                         Constants.error(LoginActivity.this,"Failed to login : "+e.getMessage());
                     }
                 });
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if ( pd != null && pd.isShowing()) {
+            pd.dismiss();
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if ( pd != null && pd.isShowing()) {
+            pd.dismiss();
+        }
     }
 }

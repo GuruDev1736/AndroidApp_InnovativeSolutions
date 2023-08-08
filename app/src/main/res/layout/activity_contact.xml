@@ -132,46 +132,19 @@
                 android:autoLink="web"
                 android:layout_margin="10dp"/>
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="WhatsApp No : "
-                android:fontFamily="@font/nunito"
-                android:textSize="18sp"
-                android:layout_margin="10dp"/>
-
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="9697981736"
-                android:fontFamily="@font/nunito"
-                android:linksClickable="true"
-                android:textColorHighlight="@color/gray"
-                android:autoLink="phone"
-                android:textColorLink="@color/primary"
-                android:textSize="18sp"
-                android:layout_margin="10dp"/>
-        </LinearLayout>
-
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="50dp"
         android:orientation="vertical">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/share"
             android:backgroundTint="@color/primary"
-            android:layout_margin="50dp"
             android:textSize="18sp"
+            android:layout_marginBottom="20dp"
             android:textColor="@color/white"
             android:fontFamily="@font/nunito"
             android:drawableLeft="@drawable/outline_share_24"
@@ -179,7 +152,16 @@
             android:layout_height="wrap_content"
             android:text="Share"/>
 
-
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/chat"
+            android:backgroundTint="@color/primary"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nunito"
+            android:drawableLeft="@drawable/outline_chat_24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chat with us"/>
 
     </LinearLayout>
 
